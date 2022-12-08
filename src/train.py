@@ -9,7 +9,7 @@ from model import Classifier
 
 if __name__ == "__main__":
 
-    classifier = Classifier("bert-base-uncased")
+    classifier = Classifier("distilbert-base-uncased")
     criterion = nn.BCEWithLogitsLoss()
     optimizer = optim.Adam(params=classifier.model.parameters())
 
@@ -27,10 +27,10 @@ if __name__ == "__main__":
 
     # Initialize validation set and loader.
     train_loader = DataLoader(
-        dataset=train_set, batch_size=16, num_workers=8
+        dataset=train_set, batch_size=32, num_workers=8
     )
     val_loader = DataLoader(
-        dataset=val_set, batch_size=16, num_workers=8
+        dataset=val_set, batch_size=32, num_workers=8
     )
 
     # Initialize best accuracy.
