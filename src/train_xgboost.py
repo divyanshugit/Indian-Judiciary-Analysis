@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-
+import pickle
 
 from scipy import stats
 from sklearn.metrics import r2_score,mean_absolute_error
@@ -49,3 +49,7 @@ print("f1 Score on test set: {:.2f}"
        .format(f1_score(Y_test, y_pred_test, average='weighted')))
 print("Mean Squared Error on test: {:.2f}"
        .format(mean_squared_error(Y_test, y_pred_test, squared=False)))
+
+
+filename = 'xgb_model.pkl'
+pickle.dump(xgb_model, open(filename, 'wb'))
