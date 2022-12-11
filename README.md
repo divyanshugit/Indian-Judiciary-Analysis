@@ -33,7 +33,10 @@ tar -xvf keys/keys.tar.gz -C ~/divyanshu/PreCog/data/
 ## Findings:
 
 ### Year 2016:
-
+![Cases Filed in year 2016](./assests/year_2016.png)
+![Cases Filed in Bihar 2016](./assests/year_bihar_2016.png)
+![Gender distribution of Female Defendant](./assests/female_adv_def_2016.png)
+![Gender distribution of Female Petitioner](./assests/female_adv_def_2017.png)
 
 ## Classification for Judge assignment on a case:
 
@@ -82,5 +85,6 @@ Metric(f1-score):
 
 To do:
 - [ ] Optimize the Hyperparameter of DistillBERT.
+
 
 
