@@ -32,6 +32,9 @@ tar -xvf keys/keys.tar.gz -C ~/divyanshu/PreCog/data/
 
 ## Findings:
 
+### Year 2016:
+
+
 ## Classification for Judge assignment on a case:
 
 For classification of Judge on a case:
@@ -59,7 +62,7 @@ Metric(f1-score):
 - On test data: 56%
 
 To do:
-- [] Optimize the Hyperparameter of XGBoost.
+- [ ] Optimize the Hyperparameter of XGBoost.
 
 ### Fine-tuning DistillBERT
 To train DistillBERT,
@@ -67,11 +70,12 @@ Key things:
 - We will enhance, the data of `judge_clean.csv` by utilizing `cases_state_key.csv` and `cases_district_key.csv` to map the actual name of States and Districts.
 
 ```
+$ python src/preprocessor.py # To generate data
 $ python src/train.py
 ```
 Metric(f1-score):
 - On test data: 45%
 
 To do:
-- [] Optimize the Hyperparameter of DistillBERT.
+- [ ] Optimize the Hyperparameter of DistillBERT.
 
