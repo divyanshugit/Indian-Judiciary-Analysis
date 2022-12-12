@@ -19,7 +19,7 @@ where they examined the group bias in the Indian Judiciary System. A few section
 
 After downloading the datasets:
 
-```
+```bash
 tar -xvf judges_clean.tar.gz -C ~/divyanshu/PreCog/data/judge/
 tar -xvf cases/cases.tar.gz -C ~/divyanshu/PreCog/data/case/
 tar -xvf keys/keys.tar.gz -C ~/divyanshu/PreCog/data/
@@ -38,6 +38,7 @@ tar -xvf keys/keys.tar.gz -C ~/divyanshu/PreCog/data/
 ## Classification for Judge assignment on a case:
 
 For classification of Judge on a case:
+
 ```
 Inputs: Judge Position, State, Location
 Labels: Female, Otherwise, Unclear
@@ -54,22 +55,25 @@ To train the XGBoost classifier,
 Key things:
 - In the `judge_clean.csv`,  we will encode the `judge_position`.
 
-```
+```python
 $ python src/train_xgboost.py
 ```
 
 Metric(f1-score):
 - On test data: 56%
 
-To do:
-- [ ] Optimize the Hyperparameter of XGBoost.
+- [x] Optimize the Hyperparameter of XGBoost.
+
+```python
+$ python src/optimize_xgb.py
+```
 
 ### Fine-tuning DistillBERT
 To train DistillBERT,
 Key things:
 - We will enhance, the data of `judge_clean.csv` by utilizing `cases_state_key.csv` and `cases_district_key.csv` to map the actual name of States and Districts.
 
-```
+```python
 $ python src/preprocessor.py # To generate data
 $ python src/train.py
 ```
@@ -78,4 +82,5 @@ Metric(f1-score):
 
 To do:
 - [ ] Optimize the Hyperparameter of DistillBERT.
+
 
