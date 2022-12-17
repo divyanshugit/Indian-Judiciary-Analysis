@@ -40,7 +40,7 @@ tar -xvf keys/keys.tar.gz -C ~/divyanshu/PreCog/data/
 For classification of Judge on a case:
 
 ```
-Inputs: Judge Position, State, Location
+Inputs: Judge Position, Location(State, District)
 Labels: Female, Otherwise, Unclear
 ```
 
